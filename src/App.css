@@ -1,38 +1,110 @@
+body { 
+  background-color: #202020;
+  color : rgb(235, 83, 57); 
+  font-size: 25px;
+}
 .App {
+  font-family: 'Titillium Web', sans-serif;
+  width:100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 50% 30%;
+}
+.view { 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+.password-content { 
+  box-sizing: border-box;
+  padding-bottom: 40px;
+}
+.password-content * { 
+  text-align:center;
+  margin: 0 ;
+}
+.hidden-password { 
+  letter-spacing: 7px;
+  font-size:57px;
+}
+.password-content h5{
+  font-weight: 300; 
+}
+.view img { 
+  padding:10px;
+  width:650px;
+  height: 400px;
+}
+.keyboard{ 
+  box-sizing: border-box;
+  padding:40px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.keyboardLetter { 
+  margin: 5px 5px;
+  text-align: center;
+  font-family: 'Titillium Web', sans-serif;
+  min-width:50px;
+  max-height: 50px;
+  color:tomato; 
+  font-size: 30px;
+  outline: none;
+  border:2px solid tomato;
+  background-color: #202020;
+  text-shadow: 0px 0px 5px tomato;
+  box-shadow: 0px 0px 7px 1px tomato;
+}
+.contains { 
+  border:2px solid black;
+  box-shadow: none;
+  text-shadow: none;
+  color: black;
+}
+.keyboardLetter:hover {
+  cursor: pointer;
+}
+.title-header { 
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.defeat-screen { 
+  width:100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  flex-direction: column;
+  font-size: 35px;
 }
-
-.App-link {
-  color: #61dafb;
+.winGame { 
+  border:2px solid green;
+  box-shadow: 0px 0px 7px 1px green; 
+  text-shadow: 0px 0px 3px green;
+  color : green; 
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.defeat-screen *{ 
+  margin: 0 ;
+}
+.defeat-screen h1 { 
+  font-size: 45px;
+}
+.reload { 
+  color : tomato ;
+  background-color: #202020;
+  padding:10px 45px;
+  outline: none;
+  border: 3px solid tomato;
+  font-family: 'Titillium Web', sans-serif;
+  border-radius: 20px;
+  margin-top:20px;
+  font-size:25px;
+  transition: 0.34s ease all;
+}
+.reload:hover {
+  cursor: pointer; 
+  color:white;
+  box-shadow: 0px 0px 2px 1px tomato;
 }
